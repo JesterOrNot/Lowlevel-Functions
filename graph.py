@@ -12,10 +12,10 @@ def bfs(graph, start):
     explored = [start]
     queue = [start]
     while queue:
-        s = queue.pop(0)
-        print(s, end=" -> ")
+        current = queue.pop(0)
+        print(current, end=" -> ")
 
-        for neighbour in graph[s]:
+        for neighbour in graph[current]:
             if neighbour not in explored:
                 explored.append(neighbour)
                 queue.append(neighbour)
